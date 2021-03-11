@@ -5,9 +5,14 @@ class User:
 
     users = []
 
-    def__init__(self,username,password):
+    def __init__(self,username,password):
 
         #generated new instance of user
 
         self.username = username
         self.password = password
+
+    def save_user(self):
+        # function to create user credentials
+
+        User.users.append(self)
