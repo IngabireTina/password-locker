@@ -42,6 +42,32 @@ class Credential_Test(unittest.TestCase):
         self.credential.save_credential()
         self.assertEqual(len(Credential.credentials),1)
 
+
+    def tearDown(self):
+
+        # method after each test done
+        Credential.credentials = []
+
+    def test_save_multiple_accounts(self):
+
+        #test to check if saving many credentials is working
+        self.credential.save_credential()
+        test_credential = Credential("instagram","clementine","tine") 
+        test_credential.save_credential()
+        self.assertEqual(len(Credential.credentials),2)
+
+
+    def test_deleted_credential(self):
+        # check if u can delete account credential
+
+        self.credential.save_credential()
+        test_credential = Credential("instagram","clementine","tine") 
+        test_credential.save_credential()
+        self.credential.delete_credential()
+        self.assertEqual(len(Credential.credentials),1) 
+
+
+
 if __name__ == '__main__':
     unittest.main()
         
