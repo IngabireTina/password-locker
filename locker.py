@@ -64,7 +64,11 @@ class Credential():
             if credential.account_name == account_name:
                 return credential
 
-    
+    @classmethod
+    def view_all_credential(cls):
+        #show all credential
+        retunr cls.credentials
+        
 
 
  
