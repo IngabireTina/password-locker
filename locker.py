@@ -16,3 +16,8 @@ class User:
         # function to create user credentials
 
         User.users.append(self)
+    @classmethod
+    def list_users(cls):
+        #method to display credentials
+        return cls.users
+        
