@@ -40,7 +40,7 @@ class Credential():
         self.account_password = account_password
 
     @classmethod
-    def user_checker(cls. username, password):
+    def user_checker(cls, username, password):
         #does user exist?
 
         for user in User.users:
@@ -68,7 +68,7 @@ class Credential():
     def view_all_credential(cls):
 
         #show all credential
-        retunr cls.credentials
+        return cls.credentials
 
     def generate_password():
 
