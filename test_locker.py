@@ -22,6 +22,19 @@ class User_Test(unittest.TestCase):
         self.user.save_user()
         self.assertEqual(len(User.users),1)
 
+
+
+class Credential_Test(unittest.TestCase):
+    def setUp(self):
+        #function that runs before
+        self.credential = Credential('instagram','ingabire','ingabire')
+
+    # to check if the crediantial was correctly created
+    def test_init(self):
+        self.assertEqual(self.credential.account_name,'instagram')
+        self.assertEqual(self.credential.user_name,'ingabire')
+        self.assertEqual(self.credential.account_password,'ingabire')
+
 if __name__ == '__main__':
     unittest.main()
         
