@@ -71,8 +71,17 @@ class Credential():
         retunr cls.credentials
 
     def generate_password():
+
+        #random password generate
         account_password = random.randint(00000000,99999999)
         return account_password
+
+    def credential_ckecker(self):
+        #ckeck account existance
+        for credential in credentials:
+            if credential.account_name == account_name:
+                return True
+        return False
 
 
 
