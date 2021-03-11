@@ -66,6 +66,28 @@ class Credential_Test(unittest.TestCase):
         self.credential.delete_credential()
         self.assertEqual(len(Credential.credentials),1) 
 
+    def test_search_credential(self):
+        
+         #can u find account credential(searching)
+        self.credential.save_credential()
+        test_credential = Credential("instagram","clementine","tine")  
+        test_credential.save_credential()
+        found = Credential.search_credential("instagram")
+        self.assertEqual(found.account_name,test_credential.account_name)
+
+    def test_credential(self):
+
+        #does the credential account exist?
+
+        self.credential.save_credential()
+        found = Credential("instagram","clementine","tine")  
+        found.save_credential()
+        credential_found = Credential.search_credential("Istagram")
+        self.assertTrue(credential_found)
+
+
+
+
 
 
 if __name__ == '__main__':
