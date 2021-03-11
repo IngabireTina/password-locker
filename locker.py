@@ -20,4 +20,8 @@ class User:
     def list_users(cls):
         #method to display credentials
         return cls.users
+
+    def delete(cls):
+        #method to delete credentials
+        User.users.remove(self)
         
