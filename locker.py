@@ -66,9 +66,14 @@ class Credential():
 
     @classmethod
     def view_all_credential(cls):
+
         #show all credential
         retunr cls.credentials
-        
+
+    def generate_password():
+        account_password = random.randint(00000000,99999999)
+        return account_password
+
 
 
  
