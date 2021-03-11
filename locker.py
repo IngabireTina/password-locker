@@ -48,4 +48,13 @@ class Credential():
                 user == user.username
             return user
 
+    def save_credential(self):
+        #save the credential
+        Credential.credentials.append(self)
+
+    def delete_credential(self):
+        # delete credential method
+            Credential.credentials.remove(self)
+
+
  
