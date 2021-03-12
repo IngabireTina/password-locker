@@ -12,7 +12,7 @@ social media account,<br> the app also allow you to write password or it generat
  * Python
 
 ## Contact and Email
-Tel: 0789942598
+Tel: 0789942598<br>
 Email: ingabire067@gmail.com
 
 
