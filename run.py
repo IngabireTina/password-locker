@@ -21,3 +21,31 @@ def list_users():
 def user_checker(username,password):
     user_checker = Credential.user_checker(username,password)
     return user_checker
+
+
+
+
+#create new account credential
+def create_credential(username,password,account_name):
+   
+    credential = Credential(username,password,account_name)
+    return credential
+
+
+#saving credential
+def save_credential(credential):
+    credential.save_credential()
+
+
+#delet account credential
+def delete_credential(credential):
+    credential.delete_credential()
+
+# search the account credential
+def search_credential(credential):
+    return Credential.search_credential(credential)
+
+
+# view all the account credentials
+def view_all_credential():
+    return Credential.view_all_credential()
