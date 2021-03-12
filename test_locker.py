@@ -85,6 +85,11 @@ class Credential_Test(unittest.TestCase):
         credential_found = Credential.search_credential("Istagram")
         self.assertTrue(credential_found)
 
+    def test_view_all_credential(self):
+        
+        #Can u show all credentials
+        self.assertEqual(Credential.view_all_credential(),Credential.credentials)
+
 
 
 
